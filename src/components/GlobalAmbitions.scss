@@ -1,0 +1,76 @@
+.global-ambitions {
+  background-color: var(--light-bg);
+  
+  .global-content {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    
+    @media (max-width: 768px) {
+      flex-direction: column;
+    }
+  }
+  
+  .global-image {
+    flex: 1;
+    
+    img {
+      width: 100%;
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    }
+    
+    @media (max-width: 768px) {
+      margin-bottom: 30px;
+    }
+  }
+  
+  .global-text {
+    flex: 1;
+    
+    h2 {
+      font-size: 28px;
+      font-weight: 700;
+      margin-bottom: 16px;
+      color: var(--text-color);
+      
+      @media (max-width: 768px) {
+        font-size: 24px;
+      }
+    }
+    
+    p {
+      color: #666;
+      margin-bottom: 24px;
+      line-height: 1.6;
+    }
+    
+    .features {
+      .feature-item {
+        display: flex;
+        align-items: flex-start;
+        margin-bottom: 16px;
+        
+        .check-icon {
+          background-color: var(--secondary-color);
+          color: white;
+          width: 24px;
+          height: 24px;
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin-right: 12px;
+          flex-shrink: 0;
+        }
+        
+        p {
+          margin: 0;
+          font-size: 15px;
+          font-weight: 500;
+        }
+      }
+    }
+  }
+}

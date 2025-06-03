@@ -1,0 +1,167 @@
+@import 'slick-carousel/slick/slick.css';
+@import 'slick-carousel/slick/slick-theme.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary-color: #6B3DE9;
+  --secondary-color: #FF8548;
+  --text-color: #333333;
+  --light-bg: #F8F9FA;
+  --light-purple: #F0EBFF;
+  --pink-bg: #FFF1F0;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  color: var(--text-color);
+  line-height: 1.5;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  
+  &:hover {
+    transform: translateY(-2px);
+  }
+  
+  &.btn-primary {
+    background-color: var(--secondary-color);
+    color: white;
+    
+    &:hover {
+      background-color: darken(#FF8548, 5%);
+    }
+  }
+  
+  &.btn-outline {
+    background-color: transparent;
+    border: 1px solid var(--primary-color);
+    color: var(--primary-color);
+    
+    &:hover {
+      background-color: var(--primary-color);
+      color: white;
+    }
+  }
+}
+
+.section {
+  padding: 60px 0;
+  
+  @media (max-width: 768px) {
+    padding: 40px 0;
+  }
+  
+  &-title {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 24px;
+    text-align: center;
+    
+    @media (max-width: 768px) {
+      font-size: 24px;
+    }
+  }
+}
+
+.card {
+  background: white;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  
+  &:hover {
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    transform: translateY(-5px);
+  }
+}
+
+.hero-wave {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+  
+  svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 70px;
+  }
+  
+  .shape-fill {
+    fill: #FFFFFF;
+  }
+}
+
+.slick-dots {
+  li {
+    button:before {
+      font-size: 10px;
+      color: var(--primary-color);
+      opacity: 0.25;
+    }
+    
+    &.slick-active button:before {
+      opacity: 1;
+      color: var(--primary-color);
+    }
+  }
+}
+
+.steps-indicator {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+  
+  .step {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #D9D9D9;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    
+    &.active {
+      background-color: var(--primary-color);
+      transform: scale(1.2);
+    }
+  }
+}
+
+.fade-in {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}

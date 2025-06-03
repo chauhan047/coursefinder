@@ -1,0 +1,94 @@
+.webinars-events {
+  background-color: white;
+  
+  .events-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    
+    @media (max-width: 768px) {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  .event-card {
+    background-color: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+    }
+    
+    .event-image {
+      height: 200px;
+      overflow: hidden;
+      
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.5s ease;
+      }
+      
+      &:hover img {
+        transform: scale(1.05);
+      }
+    }
+    
+    .event-content {
+      padding: 20px;
+      
+      .event-date {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        color: #666;
+        font-size: 13px;
+        margin-bottom: 12px;
+      }
+      
+      .event-title {
+        font-size: 18px;
+        font-weight: 600;
+        margin-bottom: 10px;
+        color: var(--text-color);
+      }
+      
+      .event-description {
+        color: #666;
+        font-size: 14px;
+        margin-bottom: 20px;
+        line-height: 1.5;
+      }
+    }
+  }
+  
+  .see-more {
+    text-align: center;
+    margin-top: 40px;
+    
+    .see-more-btn {
+      background: none;
+      border: none;
+      color: var(--primary-color);
+      font-weight: 500;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      
+      &:after {
+        content: "→";
+        margin-left: 8px;
+        transition: transform 0.3s ease;
+      }
+      
+      &:hover:after {
+        transform: translateX(5px);
+      }
+    }
+  }
+}
