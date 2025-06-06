@@ -36,10 +36,10 @@
         border-radius: 6px;
         border: none;
         font-size: 14px;
-        
+        color: #091C3E !important;
         &:focus {
           outline: none;
-          box-shadow: 0 0 0 2px var(--primary-color);
+          // box-shadow: 0 0 0 2px var(--primary-color);
         }
       }
     }
