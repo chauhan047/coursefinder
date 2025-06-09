@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { ArrowLeft, ArrowRight, MessageCircle, BookOpen } from 'lucide-react';
-import './Steps.scss';
+import '../../styles/Steps.scss';
 
 const Steps = () => {
   const [activeStep, setActiveStep] = useState(0);

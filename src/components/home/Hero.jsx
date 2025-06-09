@@ -1,5 +1,5 @@
 import React from 'react';
-import './Hero.scss';
+import '../../styles/Hero.scss';
 import { MapPin } from 'lucide-react';
 
 const Hero = () => {

@@ -1,7 +1,7 @@
 import React from 'react';
-import image1 from '../assets/imageaic.svg';
-import image2 from '../assets/imagebc.svg';
-import './Updates.scss';
+import image1 from '../../assets/imageaic.svg';
+import image2 from '../../assets/imagebc.svg';
+import '../../styles/Updates.scss';
 
 const Updates = () => {
   return (

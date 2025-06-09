@@ -1,7 +1,7 @@
 import React from 'react';
 import Slider from 'react-slick';
 import { Quote } from 'lucide-react';
-import './Testimonials.scss';
+import '../../styles/Testimonials.scss';
 
 const Testimonials = () => {
   const testimonials = [

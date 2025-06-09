@@ -1,6 +1,6 @@
 import React from 'react';
 import { Check } from 'lucide-react';
-import './GlobalAmbitions.scss';
+import '../../styles/GlobalAmbitions.scss';
 
 const GlobalAmbitions = () => {
   const features = [

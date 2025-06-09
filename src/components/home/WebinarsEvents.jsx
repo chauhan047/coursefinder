@@ -1,6 +1,6 @@
 import React from 'react';
 import { Calendar } from 'lucide-react';
-import './WebinarsEvents.scss';
+import '../../styles/WebinarsEvents.scss';
 
 const WebinarsEvents = () => {
   const events = [
